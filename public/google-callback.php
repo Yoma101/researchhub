@@ -1,6 +1,6 @@
 <?php
-require_once '../config/database.php';
-require_once '../includes/auth.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../includes/auth.php';
 
 $client = new Google\Client();
 $client->setClientId(GOOGLE_CLIENT_ID);

@@ -1,6 +1,6 @@
 <?php
-require_once '../config/database.php';
-require_once '../includes/auth.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../includes/auth.php';
 if (isLoggedIn()) redirect('dashboard.php');
 if (!isset($_SESSION['reset_verified']) || !isset($_SESSION['reset_email'])) redirect('forgot-password.php');
 
