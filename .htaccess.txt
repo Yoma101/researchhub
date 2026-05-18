@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Redirect to HTTPS (if needed)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+    # Block access to hidden directories
+    RewriteRule ^(?:vendor|config|includes|assets/uploads/.*\.php)$ - [F,L]
+</IfModule>

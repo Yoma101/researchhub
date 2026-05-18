@@ -1,0 +1,16 @@
+# Sensitive configs
+config/database.php
+
+# Uploaded files
+assets/uploads/papers/
+assets/uploads/avatars/
+
+# Composer dependencies
+vendor/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
