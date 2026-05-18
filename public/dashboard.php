@@ -1,6 +1,6 @@
 <?php
-require_once '../config/database.php';
-require_once '../includes/auth.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../includes/auth.php';
 requireLogin();
 
 $papers = $pdo->query("SELECT p.*, u.full_name as author FROM papers p JOIN users u ON p.user_id = u.id ORDER BY upload_date DESC LIMIT 10")->fetchAll();
@@ -10,7 +10,7 @@ $questions = $pdo->query("SELECT q.*, u.full_name as author FROM questions q JOI
 <html lang="en">
 <head><title>Dashboard</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css"></head>
 <body>
-<?php include '../includes/navbar.php'; ?>
+<?php include __DIR__ . '/../includes/navbar.php'; ?>
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8">

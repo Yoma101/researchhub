@@ -1,5 +1,5 @@
 <?php
-require_once '../config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
 // Set your desired admin password here
 $new_password = 'Admin@123';   // change if you want
