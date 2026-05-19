@@ -2,10 +2,11 @@
 session_start();
 date_default_timezone_set('Asia/Manila');
 
-$db_host = getenv('DB_HOST') ?: 'localhost';
-$db_name = getenv('DB_NAME') ?: 'researchhub';
-$db_user = getenv('DB_USER') ?: 'root';
-$db_pass = getenv('DB_PASS') ?: '';
+// config/database.php
+$db_host = getenv('MYSQLHOST') ?: (getenv('DB_HOST') ?: 'localhost');
+$db_name = getenv('MYSQLDATABASE') ?: (getenv('DB_NAME') ?: 'researchhub');
+$db_user = getenv('MYSQLUSER') ?: (getenv('DB_USER') ?: 'root');
+$db_pass = getenv('MYSQLPASSWORD') ?: (getenv('DB_PASS') ?: '');
 
 define('SITE_URL', getenv('SITE_URL') ?: 'http://localhost/researchhub/public/');
 define('GOOGLE_CLIENT_ID', getenv('GOOGLE_CLIENT_ID') ?: '');
